@@ -60,6 +60,6 @@ hr {
   border: 1px solid grey;
   border-radius: 0.75rem;
   margin: 1rem 1rem;
-  max-width: 500px;
+  /* max-width: 500px; */
   padding: 1rem;
 }
