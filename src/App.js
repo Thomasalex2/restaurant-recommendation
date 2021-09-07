@@ -77,6 +77,10 @@ export default function App() {
           </li>
         ))}
       </ul>
+      <footer>
+        <p> Created by Thomas Alex </p>
+        <p> As a part of markNine neoGCamp </p>
+      </footer>
     </div>
   );
 }

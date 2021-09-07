@@ -63,3 +63,18 @@ hr {
   /* max-width: 500px; */
   padding: 1rem;
 }
+
+footer {
+  padding: 2rem 2rem;
+  background-color: rgb(240, 239, 219);
+  color: black;
+  margin: -20px;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+footer p {
+  font-size: small;
+  padding: 0.05rem;
+  margin: 0rem;
+}
