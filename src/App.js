@@ -2,39 +2,48 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const fineDine_database = {
-  "Paris Panini": "4.5/5",
-  Chiante: "4/5",
-  "Rusty's": "4/5",
-  "Plan B": "4/5"
+  "Paris Panini": ["Authentic French Paninis in Indiranagar", "4.5/5"],
+  Chiante: ["Authentic Italian food", "4/5"],
+  "Rusty's": ["Italian Cuisine and Pizzeria", "4/5"],
+  "Plan B": ["American food. Primarily famous for wings", "4/5"]
 };
 
 const fastfood_database = {
-  McDonalds: "3/5",
-  "Taco Bell": "3/5",
-  "Leon Grill": "4/5",
-  Dominos: "4/5",
-  "Burger King": "3/5"
+  McDonalds: ["World famous Americn burger joint", "3/5"],
+  "Taco Bell": ["World famous Americn taco joint", "3/5"],
+  "Leon Grill": ["One of Bnagalore's most popular fast food chain", "3/5"],
+  Dominos: ["One of the more popular Pizza places in India", "4/5"],
+  "Burger King": ["World famous Americn burger joint", "3/5"]
 };
 
 const fdh_database = {
-  LunchBox: "3/5",
-  FreshMenu: "4/5",
-  "Bowl Company": "4.5/5",
-  "Paratha Box": "4/5"
+  LunchBox: ["Very inexpensive and popular, serving indian cuisine", "3/5"],
+  FreshMenu: ["Popular for relatively inexpensive continental food", "4/5"],
+  "Bowl Company": [
+    "Slightly expensive, but serves variety of different kinds of rice/paratha bowls",
+    "4.5/5"
+  ],
+  "Paratha Box": ["Serves all kinds of stuffed paratha you can imagine", "4/5"]
 };
 
 const costEffective_database = {
-  "Dosa Canteens": "4/5",
-  "VV Puram Street": "4/5"
+  "Dosa Canteens": [
+    "Very inexpenive serving all kinds of Dosas you can imagine",
+    "4/5"
+  ],
+  "VV Puram Street": [
+    "Food street for all kinds of vegetarian and chinese options",
+    "3/5"
+  ]
 };
 
 export default function App() {
   var [name, setName] = useState([]);
-  var [rating, setRating] = useState([]);
+  var [info, setInfo] = useState([]);
 
   function renderLists(data) {
     setName(Object.keys(data));
-    setRating(Object.values(data));
+    setInfo(Object.values(data));
   }
 
   return (
@@ -72,7 +81,8 @@ export default function App() {
           <li className="list-entry">
             <div>
               <span className="rest-name"> {each} </span>
-              <span className="rest-rating"> {rating[index]} ⭐ </span>
+              <span className="rest-desc"> {info[index][0]} </span>
+              <span className="rest-rating"> {info[index][1]} ⭐ </span>
             </div>
           </li>
         ))}

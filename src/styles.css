@@ -42,9 +42,16 @@ hr {
 }
 
 .rest-name {
-  display: inline-block;
+  display: block;
   font-weight: bold;
   font-size: 1.2rem;
+  padding-right: 1rem;
+  margin-left: 1rem;
+}
+
+.rest-desc {
+  display: block;
+  font-size: 1rem;
   padding-right: 1rem;
   margin-left: 1rem;
 }
